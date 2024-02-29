@@ -1,20 +1,20 @@
 export type SiteConfig = {
-    name: string
-    description: string
-    url: string
-    links: {
-      twitter: string
-      github: string
-    }
-}
+	name: string;
+	description: string;
+	url: string;
+	links: {
+		twitter: string;
+		github: string;
+	};
+};
 
 export const siteConfig: SiteConfig = {
-  name: "Shadcn Tag Input",
-  description:
-    "A tag input component implementation of Shadcn's input component",
-  url: "https://shadcn-tag-input.vercel.app",
-  links: {
-    twitter: "https://twitter.com/jal_eelll",
-    github: "https://github.com/JaleelB/shadcn-tag-input",
-  },
-}
+	name: "Glove UI",
+	description:
+		"Beautiful shadcn UI components for gloved fingers that you can copy and paste into your project.",
+	url: "https://TODO.com",
+	links: {
+		twitter: "https://twitter.com/davidwittness",
+		github: "https://github.com/JumboLove/glove-ui",
+	},
+};

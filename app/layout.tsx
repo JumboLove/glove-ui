@@ -9,65 +9,55 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Shadcn Tag Input",
-  description: `A tag input component implementation of Shadcn's input component`,
-  keywords: [
-    "shadcn",
-    "tag input",
-    "shadcn/ui",
-    "shadcn tag input",
-    "tag input component",
-    "shadcn tag input component",
-    "input",
-    "radix ui",
-    "react tag input",
-  ],
-  authors: [
-    {
-      name: "Jaleel Bennett",
-      url: "https://jaleelbennett.com",
-    },
-  ],
-  creator: "Jaleel Bennett",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    creator: "@jal_eelll",
-  },
+	title: "Glove UI",
+	description: `Beautiful components for gloved fingers that you can copy and paste into your project.`,
+	keywords: ["shadcn", "tag input", "shadcn/ui", "input", "radix ui"],
+	authors: [
+		{
+			name: "David Witt",
+			url: "https://davidwitt.me",
+		},
+	],
+	creator: "David Witt",
+	themeColor: [
+		{ media: "(prefers-color-scheme: light)", color: "white" },
+		{ media: "(prefers-color-scheme: dark)", color: "black" },
+	],
+	openGraph: {
+		type: "website",
+		locale: "en_US",
+		url: siteConfig.url,
+		title: siteConfig.name,
+		description: siteConfig.description,
+		siteName: siteConfig.name,
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: siteConfig.name,
+		description: siteConfig.description,
+		creator: "@davidwittness",
+	},
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html className="smooth-scroll" lang="en">
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-        <Analytics />
-        <Toaster />
-      </body>
-    </html>
-  );
+	return (
+		<html className="smooth-scroll" lang="en">
+			<body className={inter.className}>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					{children}
+				</ThemeProvider>
+				<Analytics />
+				<Toaster />
+			</body>
+		</html>
+	);
 }
