@@ -2,6 +2,10 @@
 
 TODO
 
+## Attribution
+
+This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadcn-tag-input).
+
 ## Everything below this line is subject to deletion
 
 [Shadcn Tag Input](https://shadcn-tag-input.vercel.app/) is a tag input component built as part of the Shadcn design system. It offers a blend of customization and out-of-the-box styling, adhering to Shadcn's sleek and modern design principles.
