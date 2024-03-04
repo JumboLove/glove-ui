@@ -6,6 +6,28 @@ TODO
 
 This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadcn-tag-input).
 
+## Site Setup TODO
+
+- [x] Create Layout for pages
+- [x] Setup `/components` page
+- [ ] Setup `sidebar` navigation
+
+## TODO
+
+- [ ] Remove references to shadcn-tag-input
+- [ ] Scope out analytics and see if it makes sense for this site (assuming Vercel hosting)
+- [ ] Figure out any contentLayer needs
+- [ ] Setup sidebar (look to Shadcn's version, maybe another version)
+- [ ] Setup Remote repo
+- [ ] Setup hosting
+- [ ] Setup domain
+- [ ] Add credits/colophon
+- [ ] Setup live preview area
+- [ ] Setup debugging
+- [ ] Setup gloved hand
+- [ ] Port over button and checkbox
+- [ ] Port over button and checkbox demos
+
 ## Everything below this line is subject to deletion
 
 [Shadcn Tag Input](https://shadcn-tag-input.vercel.app/) is a tag input component built as part of the Shadcn design system. It offers a blend of customization and out-of-the-box styling, adhering to Shadcn's sleek and modern design principles.
