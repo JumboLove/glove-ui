@@ -6,6 +6,8 @@ import { siteConfig } from "./site-config";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { SidebarNav } from "@/components/sidebar-nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,8 +57,13 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					<SiteHeader />
-					<div className="container max-w-5xl py-4 flex justify-between">
-						<main className="w-full flex min-h-screen flex-col justify-between scroll-smooth">
+					<div className="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
+						<aside className="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block">
+							<ScrollArea className="h-full py-6 pr-6 lg:py-8">
+								<SidebarNav />
+							</ScrollArea>
+						</aside>
+						<main className="flex min-h-[calck(100vh-3.5rem)] flex-col justify-between scroll-smooth pt-6">
 							{children}
 						</main>
 					</div>

@@ -12,5 +12,19 @@ export const mainNavConfig = {
 } as const;
 
 export const sidebarConfig = {
-	links: [],
+	items: [
+		{
+			title: "Components",
+			items: [
+				{
+					title: "Button",
+					href: "/components/button",
+				},
+				{
+					title: "Checkbox",
+					href: "/components/checkbox",
+				},
+			],
+		},
+	],
 } as const;
