@@ -55,8 +55,8 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					<SiteHeader />
-					<div className="container max-w-5xl py-40 flex justify-between">
-						<main className="w-full flex min-h-screen flex-col items-center justify-between scroll-smooth">
+					<div className="container max-w-5xl py-4 flex justify-between">
+						<main className="w-full flex min-h-screen flex-col justify-between scroll-smooth">
 							{children}
 						</main>
 					</div>

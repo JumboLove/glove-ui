@@ -11,6 +11,7 @@ This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadc
 - [x] Create Layout for pages
 - [x] Setup `/components` page
 - [ ] Setup `sidebar` navigation
+- [ ] Fix sidebar staying open when navigation. ShadCN has a `mobileLink` component
 
 ## TODO
 
