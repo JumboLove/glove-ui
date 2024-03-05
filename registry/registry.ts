@@ -30,6 +30,29 @@ export const example: Registry = [
 		component: lazy(() => import("@/registry/default/example/button-demo")),
 	},
 	{
+		name: "button-large-small",
+		type: "components:example",
+		registryDependencies: ["button"],
+		files: ["example/button-large-small.tsx"],
+		component: lazy(
+			() => import("@/registry/default/example/button-large-small")
+		),
+	},
+	{
+		name: "button-variants",
+		type: "components:example",
+		registryDependencies: ["button"],
+		files: ["example/button-variants.tsx"],
+		component: lazy(() => import("@/registry/default/example/button-variants")),
+	},
+	{
+		name: "button-disabled",
+		type: "components:example",
+		registryDependencies: ["button"],
+		files: ["example/button-disabled.tsx"],
+		component: lazy(() => import("@/registry/default/example/button-disabled")),
+	},
+	{
 		name: "checkbox-demo",
 		type: "components:example",
 		registryDependencies: ["checkbox"],

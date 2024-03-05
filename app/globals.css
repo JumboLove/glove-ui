@@ -75,10 +75,19 @@
 	}
 }
 
+/* Code Blocks */
 @layer components {
 	pre .shiki,
 	pre[data-theme] {
 		background-color: rgb(24 24 27 / var(--tw-bg-opacity)) !important;
+	}
+
+	pre {
+		tab-size: 2;
+	}
+
+	[data-rehype-pretty-code-figure] + [data-rehype-pretty-code-figure] {
+		margin-top: 1rem;
 	}
 }
 
