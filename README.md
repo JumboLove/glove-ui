@@ -12,26 +12,27 @@ This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadc
 - [x] Setup `/components` page
 - [x] Setup `sidebar` navigation
 - [ ] Fix sidebar staying open when navigation. ShadCN has a `mobileLink` component
+- [ ] Fix navigation on `/components` - mobile user is stuck
 
 ## TODO
 
 - [ ] Remove references to shadcn-tag-input
 - [ ] Scope out analytics and see if it makes sense for this site (assuming Vercel hosting)
-- [ ] Figure out any contentLayer needs
-- [ ] Setup sidebar (look to Shadcn's version, maybe another version)
+- [x] Figure out any contentLayer needs
+- [x] Setup sidebar (look to Shadcn's version, maybe another version)
 - [ ] Setup Remote repo
 - [ ] Setup hosting
 - [ ] Setup domain
 - [ ] Add credits/colophon
-- [ ] Setup live preview area
+- [x] Setup live preview area
 - [ ] Setup debugging
 - [ ] Setup gloved hand
 - [ ] Port over button and checkbox
 - [ ] Port over button and checkbox demos
 - [ ] Customized `notFound()` for components and general pages
 - [ ] Hydration error - themes related?
-- [ ] Add `glove-ui.ts` copy/paste over for setup instructions
-- [ ] Replace `tabs` with better, more visible version - checkout Flowbyte?
+- [x] Add `glove-ui.ts` copy/paste over for setup instructions
+- [x] Replace `tabs` with better, more visible version - checkout Flowbyte?
 
 ## Everything below this line is subject to deletion
 
