@@ -76,8 +76,9 @@
 }
 
 @layer components {
-	pre .shiki {
-		background-color: transparent !important;
+	pre .shiki,
+	pre[data-theme] {
+		background-color: rgb(24 24 27 / var(--tw-bg-opacity)) !important;
 	}
 }
 
