@@ -23,11 +23,23 @@ export function ComponentPreview({ name, children }: ComponentPreviewProps) {
 	}, [Code]);
 
 	return (
-		<Tabs defaultValue="preview" className="">
-			<TabsList>
-				<TabsTrigger value="preview">Preview</TabsTrigger>
-				<TabsTrigger value="code">Code</TabsTrigger>
-			</TabsList>
+		<Tabs defaultValue="preview" className="relative mr-auto w-full">
+			<div className="flex items-center justify-between pb-3">
+				<TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
+					<TabsTrigger
+						value="preview"
+						className="relative h-9 rounded-none border-b-2 border-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+					>
+						Preview
+					</TabsTrigger>
+					<TabsTrigger
+						value="code"
+						className="relative h-9 rounded-none border-b-2 border-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+					>
+						Code
+					</TabsTrigger>
+				</TabsList>
+			</div>
 			<TabsContent value="preview">
 				<Preview name={name} />
 			</TabsContent>
