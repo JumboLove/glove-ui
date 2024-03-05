@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { ComponentPreview } from "@/components/component-preview";
 import Pre from "../pre";
+import { Step, Steps } from "../steps";
+import { FileCodeBlock } from "../file-code-block";
 
 interface MdxProps {
 	code: string;
@@ -55,6 +57,9 @@ const components = {
 	),
 	ComponentPreview,
 	pre: Pre,
+	Step,
+	Steps,
+	FileCodeBlock,
 };
 
 export function Mdx({ code }: MdxProps) {
