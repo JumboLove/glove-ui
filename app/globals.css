@@ -75,6 +75,13 @@
 	}
 }
 
+@layer components {
+	pre .shiki {
+		background-color: transparent !important;
+	}
+}
+
+/* Steps Components */
 @layer utilities {
 	.step {
 		counter-increment: step;

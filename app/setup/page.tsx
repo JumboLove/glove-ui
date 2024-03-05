@@ -1,8 +1,12 @@
 import CodeBlock from "@/components/code-block";
 import { Code } from "@/components/code-inline";
+import { FileCodeBlock } from "@/components/file-code-block";
 import { PageHeader } from "@/components/page-header";
+
 import { Step, Steps } from "@/components/steps";
+
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function SetupPage() {
 	return (
@@ -25,6 +29,13 @@ export default function SetupPage() {
 					This folder should be a sibling of the <Code>ui</Code> folder, as
 					these components will coexist together, but never overwrite each other
 				</p>
+				<Step>
+					Create <Code>lib/glove-ui.ts</Code>
+				</Step>
+				<p>Copy and paste in the following code</p>
+				<Suspense fallback={<div>Loading...</div>}>
+					<FileCodeBlock fileName="lib/glove-ui.ts" />
+				</Suspense>
 				<Step>Copy components into your project</Step>
 				<p>
 					All components are single files that will inherit shadcn/ui themes

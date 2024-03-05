@@ -31,6 +31,7 @@ This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadc
 - [ ] Customized `notFound()` for components and general pages
 - [ ] Hydration error - themes related?
 - [ ] Add `glove-ui.ts` copy/paste over for setup instructions
+- [ ] Replace `tabs` with better, more visible version - checkout Flowbyte?
 
 ## Everything below this line is subject to deletion
 
