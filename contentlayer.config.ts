@@ -1,7 +1,13 @@
 import { defineNestedType, makeSource } from "contentlayer/source-files";
 import rehypePrettyCode from "rehype-pretty-code";
+import { rehypeComponent } from "./lib/rehype-component";
 
 import { defineDocumentType } from "contentlayer/source-files";
+
+/** @type {import('rehype-pretty-code').Options} */
+const prettyCodeOptions = {
+	theme: "dracula-soft",
+};
 
 export const Snippet = defineDocumentType(() => ({
 	name: "Snippet",
@@ -91,18 +97,7 @@ export const Component = defineDocumentType(() => ({
 export default makeSource({
 	contentDirPath: "content",
 	documentTypes: [Snippet, Component],
-	//   mdx: {
-	//     rehypePlugins: [
-	//       [
-	//         rehypePrettyCode,
-	//         {
-	//           keepBackground: false,
-	//           theme: {
-	//             dark: "github-dark",
-	//             light: "github-light",
-	//           },
-	//         },
-	//       ],
-	//     ],
-	//   },
+	mdx: {
+		rehypePlugins: [rehypeComponent, [rehypePrettyCode, prettyCodeOptions]],
+	},
 });

@@ -29,6 +29,8 @@ This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadc
 - [ ] Port over button and checkbox
 - [ ] Port over button and checkbox demos
 - [ ] Customized `notFound()` for components and general pages
+- [ ] Hydration error - themes related?
+- [ ] Add `glove-ui.ts` copy/paste over for setup instructions
 
 ## Everything below this line is subject to deletion
 

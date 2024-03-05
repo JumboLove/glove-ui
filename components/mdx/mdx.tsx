@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 import { useMDXComponent } from "next-contentlayer/hooks";
+import { ComponentPreview } from "@/components/component-preview";
+import Pre from "../pre";
 
 interface MdxProps {
 	code: string;
@@ -51,6 +53,8 @@ const components = {
 			{...props}
 		/>
 	),
+	ComponentPreview,
+	pre: Pre,
 };
 
 export function Mdx({ code }: MdxProps) {
