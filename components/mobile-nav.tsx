@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Button } from "./ui/button";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import { ScrollArea } from "./ui/scroll-area";
 import { mainNavConfig } from "@/config/nav";
+import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function MobileNav() {
 	const [open, setOpen] = useState(false);
@@ -49,21 +51,53 @@ export default function MobileNav() {
 				</Button>
 			</SheetTrigger>
 			<SheetContent side="left" className="pr-0">
-				<Link href={"/"}>Glove UI</Link>
+				<MobileLink href={"/"} onOpenChange={setOpen}>
+					Glove UI
+				</MobileLink>
 				<ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10">
 					{mainNavConfig.links.map((link) => {
 						return (
-							<Link
+							<MobileLink
 								href={link.href}
 								key={link.href}
 								className="flex items-center p-2"
+								onOpenChange={setOpen}
 							>
 								{link.title}
-							</Link>
+							</MobileLink>
 						);
 					})}
 				</ScrollArea>
 			</SheetContent>
 		</Sheet>
+	);
+}
+
+interface MobileLinkProps extends LinkProps {
+	onOpenChange?: (open: boolean) => void;
+	children: React.ReactNode;
+	className?: string;
+}
+
+function MobileLink({
+	href,
+	onOpenChange,
+	className,
+	children,
+	...props
+}: MobileLinkProps) {
+	const router = useRouter();
+	return (
+		<Link
+			href={href}
+			onClick={() => {
+				router.push(href.toString());
+				onOpenChange?.(false);
+			}}
+			className={cn(className)}
+			{...props}
+		>
+			{children}
+		</Link>
 	);
 }

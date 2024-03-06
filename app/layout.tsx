@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: "Glove UI",
 	description: `Beautiful components for gloved fingers that you can copy and paste into your project.`,
-	keywords: ["shadcn", "tag input", "shadcn/ui", "input", "radix ui"],
+	keywords: ["shadcn", "shadcn/ui", "radix ui", "tailwind"],
 	authors: [
 		{
 			name: "David Witt",
@@ -48,7 +48,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html className="smooth-scroll" lang="en">
+		<html className="smooth-scroll" lang="en" suppressHydrationWarning>
 			<body className={inter.className}>
 				<ThemeProvider
 					attribute="class"
