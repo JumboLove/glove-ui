@@ -1,12 +1,20 @@
+"use client";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getComponent } from "@/registry/utils";
-import { Suspense, useMemo, Children, HTMLAttributes } from "react";
+import { Suspense, useMemo, Children, HTMLAttributes, useState } from "react";
+import { Toggle } from "@/components/ui/toggle";
+import { cn } from "@/lib/utils";
+import { Inspect } from "lucide-react";
 
 interface ComponentPreviewProps extends HTMLAttributes<HTMLDivElement> {
 	name: string;
 }
 
-export function ComponentPreview({ name, children }: ComponentPreviewProps) {
+export default function ComponentPreview({
+	name,
+	children,
+}: ComponentPreviewProps) {
 	const Codes = Children.toArray(children) as React.ReactElement[];
 	// TODO configure syles to load from local state
 	const Code = Codes[0];
@@ -41,6 +49,12 @@ export function ComponentPreview({ name, children }: ComponentPreviewProps) {
 }
 
 function Preview({ name }: { name: string }) {
+	const [debugActive, setDebugActive] = useState(false);
+
+	function toggleDebug() {
+		setDebugActive(!debugActive);
+	}
+
 	const Preview = useMemo(() => {
 		const registryItem = getComponent(name);
 		const Component = registryItem?.component;
@@ -61,8 +75,20 @@ function Preview({ name }: { name: string }) {
 	}, [name]);
 
 	return (
-		<div className="p-4 flex items-center justify-center min-h-[340px] border rounded-md ">
+		<div
+			className={cn(
+				"p-4 flex items-center justify-center min-h-[340px] border rounded-md relative",
+				debugActive && "debug-active"
+			)}
+		>
 			<Suspense fallback={<div>Loading...</div>}>{Preview}</Suspense>
+			<Toggle
+				onClick={toggleDebug}
+				aria-label="toggle debug"
+				className="absolute bottom-2 left-2"
+			>
+				<Inspect className="h-4 w-4" />
+			</Toggle>
 		</div>
 	);
 }

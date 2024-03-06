@@ -103,3 +103,13 @@
 		content: counter(step);
 	}
 }
+
+/* 
+	Visual Debugging 
+	Set ".debug-active" on a parent class to show
+*/
+@layer utilities {
+	.debug-active .debug-bg {
+		@apply bg-red-400/60;
+	}
+}

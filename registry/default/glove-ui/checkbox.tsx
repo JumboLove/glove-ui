@@ -48,7 +48,7 @@ const Checkbox = React.forwardRef<
 		>
 			{/* Invisible box that makes click target bigger than the visible checkbox */}
 			<div
-				className={cn("h-12 w-12 absolute", invisibleBoxSizeClasses)}
+				className={cn("h-12 w-12 absolute debug-bg", invisibleBoxSizeClasses)}
 				aria-hidden="true"
 			></div>
 			<CheckboxPrimitive.Indicator
