@@ -113,3 +113,13 @@
 		@apply bg-red-400/60;
 	}
 }
+
+/*
+	Custom cursor
+*/
+@layer utilities {
+	.custom-cursor-active,
+	.custom-cursor-active * {
+		cursor: none;
+	}
+}
