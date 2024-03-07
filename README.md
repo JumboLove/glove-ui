@@ -13,6 +13,8 @@ This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadc
 - [x] Setup `sidebar` navigation
 - [x] Fix sidebar staying open when navigation. ShadCN has a `mobileLink` component
 - [ ] Fix navigation on `/components` - mobile user is stuck
+- [ ] Homepage
+- [ ] Update next.js if I dare
 
 ## TODO
 
@@ -25,14 +27,22 @@ This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadc
 - [ ] Setup domain
 - [ ] Add credits/colophon
 - [x] Setup live preview area
-- [ ] Setup debugging
-- [ ] Setup gloved hand
+- [x] Setup debugging
+- [x] Setup gloved hands
 - [x] Port over button and checkbox
 - [x] Port over button and checkbox demos
 - [ ] Customized `notFound()` for components and general pages
 - [x] Hydration error - themes related?
 - [x] Add `glove-ui.ts` copy/paste over for setup instructions
 - [x] Replace `tabs` with better, more visible version - checkout Flowbyte?
+- [ ] Add radix-ui docs, api-reference
+
+## Developer Flow
+
+1. Create a component in `registry/default/glove-ui`
+1. Update the registry with this component
+1. Update `nav.ts` `sidebarConfig`
+1. Create a new MDX file in `content/components`
 
 ## Everything below this line is subject to deletion
 

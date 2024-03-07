@@ -19,6 +19,14 @@ export const gloveUi: Registry = [
 		files: ["glove-ui/checkbox.tsx"],
 		component: lazy(() => import("@/registry/default/glove-ui/checkbox")),
 	},
+	{
+		name: "slider",
+		title: "Slider",
+		type: "components:ui",
+		dependencies: [" @radix-ui/react-slider"],
+		files: ["glove-ui/slider.tsx"],
+		component: lazy(() => import("@/registry/default/glove-ui/slider")),
+	},
 ];
 
 export const example: Registry = [
@@ -74,6 +82,13 @@ export const example: Registry = [
 		component: lazy(
 			() => import("@/registry/default/example/checkbox-disabled")
 		),
+	},
+	{
+		name: "slider-demo",
+		type: "components:example",
+		registryDependencies: ["slider"],
+		files: ["example/slider-demo.tsx"],
+		component: lazy(() => import("@/registry/default/example/slider-demo")),
 	},
 ];
 

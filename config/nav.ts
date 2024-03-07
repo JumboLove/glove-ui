@@ -24,6 +24,10 @@ export const sidebarConfig = {
 					title: "Checkbox",
 					href: "/components/checkbox",
 				},
+				{
+					title: "Slider",
+					href: "/components/slider",
+				},
 			],
 		},
 	],
