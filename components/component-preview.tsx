@@ -36,17 +36,6 @@ export default function ComponentPreview({
 	// TODO configure syles to load from local state
 	const Code = Codes[0];
 
-	// const codeString = useMemo(() => {
-	// 	if (
-	// 		typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
-	// 	) {
-	// 		const [, Button] = Children.toArray(
-	// 			Code.props.children
-	// 		) as React.ReactElement[];
-	// 		return Button?.props?.value || Button?.props?.__rawString__ || null;
-	// 	}
-	// }, [Code]);
-
 	return (
 		<Tabs defaultValue="preview">
 			<TabsList>
@@ -113,7 +102,7 @@ function Preview({ name }: { name: string }) {
 			>
 				<Suspense fallback={<div>Loading...</div>}>{Preview}</Suspense>
 				<div className="absolute bottom-2 left-2 flex flex-col gap-2">
-					<GloveToggle onClick={toggleHand} />
+					<GloveToggle active={handActive} onClick={setHandActive} />
 					<DebugToggle onClick={toggleDebug} />
 				</div>
 				{handActive && (
@@ -128,13 +117,25 @@ function Preview({ name }: { name: string }) {
 	);
 }
 
-function GloveToggle({ onClick }: { onClick: MouseEventHandler }) {
+function GloveToggle({
+	active,
+	onClick,
+}: {
+	active: boolean;
+	onClick: Function;
+}) {
 	return (
 		<TooltipProvider>
 			<Tooltip>
 				<TooltipTrigger asChild>
 					<span>
-						<Toggle onClick={onClick} aria-label="toggle glove cursor">
+						<Toggle
+							pressed={active}
+							onPressedChange={(pressed) => {
+								onClick(pressed);
+							}}
+							aria-label="toggle glove cursor"
+						>
 							{/* TODO replace with custom glove icon */}
 							<Hand className="h-4 w-4" />
 						</Toggle>
