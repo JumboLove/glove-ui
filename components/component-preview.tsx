@@ -10,12 +10,19 @@ import {
 	useState,
 	useRef,
 	LegacyRef,
+	MouseEventHandler,
 } from "react";
 import { Toggle } from "@/components/ui/toggle";
 import { cn } from "@/lib/utils";
 import { Inspect, Hand } from "lucide-react";
 import { useMouse } from "@uidotdev/usehooks";
 import { clamp } from "@/utils/math";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface ComponentPreviewProps extends HTMLAttributes<HTMLDivElement> {
 	name: string;
@@ -29,16 +36,16 @@ export default function ComponentPreview({
 	// TODO configure syles to load from local state
 	const Code = Codes[0];
 
-	const codeString = useMemo(() => {
-		if (
-			typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
-		) {
-			const [, Button] = Children.toArray(
-				Code.props.children
-			) as React.ReactElement[];
-			return Button?.props?.value || Button?.props?.__rawString__ || null;
-		}
-	}, [Code]);
+	// const codeString = useMemo(() => {
+	// 	if (
+	// 		typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
+	// 	) {
+	// 		const [, Button] = Children.toArray(
+	// 			Code.props.children
+	// 		) as React.ReactElement[];
+	// 		return Button?.props?.value || Button?.props?.__rawString__ || null;
+	// 	}
+	// }, [Code]);
 
 	return (
 		<Tabs defaultValue="preview">
@@ -106,13 +113,8 @@ function Preview({ name }: { name: string }) {
 			>
 				<Suspense fallback={<div>Loading...</div>}>{Preview}</Suspense>
 				<div className="absolute bottom-2 left-2 flex flex-col gap-2">
-					<Toggle onClick={toggleHand} aria-label="toggle debug">
-						{/* TODO replace with custom glove icon */}
-						<Hand className="h-4 w-4" />
-					</Toggle>
-					<Toggle onClick={toggleDebug} aria-label="toggle debug">
-						<Inspect className="h-4 w-4" />
-					</Toggle>
+					<GloveToggle onClick={toggleHand} />
+					<DebugToggle onClick={toggleDebug} />
 				</div>
 				{handActive && (
 					<CustomCursor
@@ -123,6 +125,45 @@ function Preview({ name }: { name: string }) {
 				)}
 			</div>
 		</div>
+	);
+}
+
+function GloveToggle({ onClick }: { onClick: MouseEventHandler }) {
+	return (
+		<TooltipProvider>
+			<Tooltip>
+				<TooltipTrigger asChild>
+					<span>
+						<Toggle onClick={onClick} aria-label="toggle glove cursor">
+							{/* TODO replace with custom glove icon */}
+							<Hand className="h-4 w-4" />
+						</Toggle>
+					</span>
+				</TooltipTrigger>
+				<TooltipContent>
+					<p>Try the UI with gloves on</p>
+				</TooltipContent>
+			</Tooltip>
+		</TooltipProvider>
+	);
+}
+
+function DebugToggle({ onClick }: { onClick: MouseEventHandler }) {
+	return (
+		<TooltipProvider>
+			<Tooltip>
+				<TooltipTrigger asChild>
+					<span>
+						<Toggle onClick={onClick} aria-label="toggle debug">
+							<Inspect className="h-4 w-4" />
+						</Toggle>
+					</span>
+				</TooltipTrigger>
+				<TooltipContent>
+					<p>Show interaction area</p>
+				</TooltipContent>
+			</Tooltip>
+		</TooltipProvider>
 	);
 }
 
