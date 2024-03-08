@@ -90,6 +90,15 @@ export const example: Registry = [
 		files: ["example/slider-demo.tsx"],
 		component: lazy(() => import("@/registry/default/example/slider-demo")),
 	},
+	{
+		name: "slider-custom-label",
+		type: "components:example",
+		registryDependencies: ["slider"],
+		files: ["example/slider-custom-label.tsx"],
+		component: lazy(
+			() => import("@/registry/default/example/slider-custom-label")
+		),
+	},
 ];
 
 export const registry: Registry = [...gloveUi, ...example];

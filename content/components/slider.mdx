@@ -3,11 +3,12 @@ title: Slider
 description: An input where the user selects a value from within a given range
 featured: false
 component: true
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/slider
+  api: https://www.radix-ui.com/primitives/docs/components/slider#api-reference
 ---
 
 <ComponentPreview name="slider-demo" />
-
-## TODO below
 
 ## Installation
 
@@ -16,12 +17,12 @@ component: true
 <Step>Install the following dependencies:</Step>
 
 ```bash
-npm install @radix-ui/react-slot
+npm install @radix-ui/react-slider
 ```
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<FileCodeBlock fileName="registry/default/glove-ui/button.tsx" />
+<FileCodeBlock fileName="registry/default/glove-ui/slider.tsx" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -30,23 +31,17 @@ npm install @radix-ui/react-slot
 ## Usage
 
 ```tsx
-import { Button } from "@/components/glove-ui/button";
+import { Button } from "@/components/glove-ui/slider";
 ```
 
 ```tsx
-<Button>Button</Button>
+<Slider />
 ```
 
 ## Examples
 
-### Variants
+### Custom Label
 
-<ComponentPreview name="button-variants" />
+<ComponentPreview name="slider-custom-label" />
 
-### Large & Small
-
-<ComponentPreview name="button-large-small" />
-
-### Disabled
-
-<ComponentPreview name="button-disabled" />
+TODO more examples

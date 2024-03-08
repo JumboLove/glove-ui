@@ -7,15 +7,17 @@ import { cn } from "@/lib/utils";
 
 /**
  * TODO
- * - [ ] add extra click/drag area
- * - [ ] add popover that travels with the thumb
+ * - [x] add extra click/drag area
+ * - [x] add popover that travels with the thumb
  * - [x] borrow popover in/out animations
- * - [ ] component for the popover label?
+ * - [x] component for the popover label?
  */
 const Slider = React.forwardRef<
 	React.ElementRef<typeof SliderPrimitive.Root>,
-	React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
->(({ className, ...props }, ref) => {
+	React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> & {
+		popupLabel?: (value: number | number[]) => React.ReactNode;
+	}
+>(({ className, popupLabel = (value) => <>{value}</>, ...props }, ref) => {
 	const [popoverVisible, setPopoverVisible] = React.useState(false);
 	const [proxiedValue, setProxiedValue] = React.useState(
 		props.defaultValue ?? 0
@@ -53,7 +55,7 @@ const Slider = React.forwardRef<
 							!popoverVisible && "invisible"
 						)}
 					>
-						{proxiedValue}
+						{popupLabel(proxiedValue)}
 					</div>
 				</div>
 			</SliderPrimitive.Thumb>
