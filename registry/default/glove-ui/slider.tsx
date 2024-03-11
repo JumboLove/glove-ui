@@ -5,13 +5,6 @@ import * as SliderPrimitive from "@radix-ui/react-slider";
 
 import { cn } from "@/lib/utils";
 
-/**
- * TODO
- * - [x] add extra click/drag area
- * - [x] add popover that travels with the thumb
- * - [x] borrow popover in/out animations
- * - [x] component for the popover label?
- */
 const Slider = React.forwardRef<
 	React.ElementRef<typeof SliderPrimitive.Root>,
 	React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> & {

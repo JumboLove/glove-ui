@@ -36,6 +36,8 @@ This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadc
 - [x] Add `glove-ui.ts` copy/paste over for setup instructions
 - [x] Replace `tabs` with better, more visible version - checkout Flowbyte?
 - [ ] Add radix-ui docs, api-reference
+- [ ] Fix mousedown events not moving the hand cursor
+- [ ]
 
 ## Developer Flow
 

@@ -6,7 +6,16 @@ export const mainNavConfig = {
 		},
 		{
 			title: "Components",
-			href: "/components",
+			href: "/components/button",
+		},
+	],
+} as const;
+
+export const mobileNavConfig = {
+	links: [
+		{
+			title: "Setup",
+			href: "/setup",
 		},
 	],
 } as const;

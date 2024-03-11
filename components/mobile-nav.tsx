@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Button } from "./ui/button";
 import Link, { LinkProps } from "next/link";
 import { ScrollArea } from "./ui/scroll-area";
-import { mainNavConfig } from "@/config/nav";
+import { mobileNavConfig, sidebarConfig } from "@/config/nav";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
@@ -55,16 +55,40 @@ export default function MobileNav() {
 					Glove UI
 				</MobileLink>
 				<ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10">
-					{mainNavConfig.links.map((link) => {
+					{mobileNavConfig.links.map((link) => {
 						return (
 							<MobileLink
 								href={link.href}
 								key={link.href}
-								className="flex items-center p-2"
+								className="flex items-center py-2"
 								onOpenChange={setOpen}
 							>
 								{link.title}
 							</MobileLink>
+						);
+					})}
+
+					{sidebarConfig.items.map((parent) => {
+						return (
+							<div key={parent.title} className="pt-4">
+								<div className="font-semi-bold text-lg pb-2">
+									{parent.title}
+								</div>
+								<div className="flex flex-col space-y-3">
+									{parent.items.map((item) => {
+										return (
+											<MobileLink
+												href={item.href}
+												key={item.href}
+												onOpenChange={setOpen}
+												className="text-muted-foreground"
+											>
+												{item.title}
+											</MobileLink>
+										);
+									})}
+								</div>
+							</div>
 						);
 					})}
 				</ScrollArea>

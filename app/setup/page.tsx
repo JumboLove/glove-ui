@@ -20,7 +20,6 @@ export default function SetupPage() {
 					</p>
 					<CodeBlock value={"npx shadcn-ui@latest init"} className="my-4" />
 					<p>Glove UI currently works for Typescript projects.</p>
-					<p>JSX components coming soon...</p>
 				</div>
 				<Step>
 					Create a <Code>glove-ui</Code> folder
@@ -41,10 +40,7 @@ export default function SetupPage() {
 					All components are single files that will inherit shadcn/ui themes
 				</p>
 				<p>
-					<Link
-						href="/components"
-						className="underline underline-offset-2 hover:underline-offset-4 transition-all"
-					>
+					<Link href="/components/button" className="link-underline">
 						Browse Components
 					</Link>
 				</p>

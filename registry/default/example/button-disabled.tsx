@@ -2,7 +2,7 @@ import { Button } from "@/registry/default/glove-ui/button";
 
 export default function ButtonDisabled() {
 	return (
-		<div className="flex gap-4 items-center">
+		<div className="flex flex-wrap gap-4 items-center justify-center">
 			<Button disabled variant={"default"}>
 				default
 			</Button>
