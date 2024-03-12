@@ -1,10 +1,6 @@
 # Glove UI
 
-TODO
-
-## Attribution
-
-This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadcn-tag-input).
+Components for gloved fingers, build with shadcn UI
 
 ## Site Setup TODO
 
@@ -12,32 +8,18 @@ This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadc
 - [x] Setup `/components` page
 - [x] Setup `sidebar` navigation
 - [x] Fix sidebar staying open when navigation. ShadCN has a `mobileLink` component
-- [ ] Fix navigation on `/components` - mobile user is stuck
-- [ ] Homepage
+- [x] Fix navigation on `/components` - mobile user is stuck
+- [x] Homepage
 - [ ] Update next.js if I dare
 
 ## TODO
 
-- [ ] Remove references to shadcn-tag-input
 - [ ] Scope out analytics and see if it makes sense for this site (assuming Vercel hosting)
-- [x] Figure out any contentLayer needs
-- [x] Setup sidebar (look to Shadcn's version, maybe another version)
 - [ ] Setup Remote repo
 - [ ] Setup hosting
 - [ ] Setup domain
-- [ ] Add credits/colophon
-- [x] Setup live preview area
-- [x] Setup debugging
-- [x] Setup gloved hands
-- [x] Port over button and checkbox
-- [x] Port over button and checkbox demos
 - [ ] Customized `notFound()` for components and general pages
-- [x] Hydration error - themes related?
-- [x] Add `glove-ui.ts` copy/paste over for setup instructions
-- [x] Replace `tabs` with better, more visible version - checkout Flowbyte?
-- [ ] Add radix-ui docs, api-reference
 - [ ] Fix mousedown events not moving the hand cursor
-- [ ]
 
 ## Why
 
@@ -84,3 +66,7 @@ You can find out more about the API and implementation in the [Documentation](ht
 Contributions are welcome.
 
 Please see `CONTRIBUTING.md` for more details
+
+## Attribution
+
+This project is insipired by [shadcn-tag-input](https://github.com/JaleelB/shadcn-tag-input).
