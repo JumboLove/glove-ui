@@ -70,10 +70,14 @@ export const Component = defineDocumentType(() => ({
 	},
 }));
 
+// Types are incorrect between contentLayer's dependencies
+// and rehype-pretty-code
+// @see https://github.com/rehype-pretty/rehype-pretty-code/issues/145
 export default makeSource({
 	contentDirPath: "content",
 	documentTypes: [Component],
 	mdx: {
+		// @ts-ignore
 		rehypePlugins: [rehypeComponent, [rehypePrettyCode, prettyCodeOptions]],
 	},
 });
