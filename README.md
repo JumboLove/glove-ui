@@ -20,6 +20,7 @@ Components for gloved fingers, build with shadcn UI
 - [ ] Setup domain
 - [ ] Customized `notFound()` for components and general pages
 - [ ] Fix mousedown events not moving the hand cursor
+- [ ] Add disclaimer on button component
 
 ## Why
 
