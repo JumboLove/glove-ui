@@ -2,14 +2,16 @@ import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 import MobileNav from "./mobile-nav";
 import { mainNavConfig } from "@/config/nav";
+import GloveUiIcon from "./icons/glove-ui";
 
 export function SiteHeader() {
 	return (
 		<header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
 			<div className="container flex h-14 max-w-screen-2xl items-center">
 				<MobileNav />
-				<Link href={"/"} className="mr-4">
-					Glove UI
+				<Link href={"/"} className="mr-4 flex items-center gap-2">
+					<GloveUiIcon className="w-4" />
+					<span>Glove UI</span>
 				</Link>
 				<MainNav />
 				<div className="ml-auto">

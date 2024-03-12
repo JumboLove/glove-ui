@@ -1,5 +1,4 @@
 "use client";
-import { ModeToggle } from "@/components/mode-toggle";
 import Hero from "@/app/(home)/sections/hero";
 import Props from "@/app/(home)/sections/props";
 import Setup from "@/app/(home)/sections/setup";
