@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Glove UI",
-	description: `Beautiful components for gloved fingers that you can copy and paste into your project.`,
+	description: `Components for gloved fingers, build with shadcn UI`,
 	keywords: ["shadcn", "shadcn/ui", "radix ui", "tailwind"],
 	authors: [
 		{
