@@ -45,6 +45,7 @@ export interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
 	asChild?: boolean;
+	popovertarget?: string;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -82,15 +83,18 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 						buttonVariants({ variant, size, className })
 					)}
 					ref={ref}
-					children={children}
 					popovertarget={popoverId}
 					id={btnId}
 					{...props}
 					{...attrs}
-				/>
+				>
+					{children}
+				</Comp>
+
 				<div
 					id={popoverId}
 					ref={popoverRef}
+					// @ts-ignore
 					popover="auto"
 					anchor={btnId}
 					className={cn(
