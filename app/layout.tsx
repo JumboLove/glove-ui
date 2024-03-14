@@ -32,7 +32,11 @@ export const metadata: Metadata = {
 		title: siteConfig.name,
 		description: siteConfig.description,
 		siteName: siteConfig.name,
-		images: "https://glove-ui.davidwitt.me/opengraph-image.jpg",
+		images: {
+			url: "https://glove-ui.davidwitt.me/opengraph-image.jpg",
+			height: 279,
+			width: 408,
+		},
 	},
 	twitter: {
 		card: "summary_large_image",
