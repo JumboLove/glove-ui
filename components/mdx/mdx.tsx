@@ -4,6 +4,7 @@ import ComponentPreview from "@/components/component-preview";
 import Pre from "../pre";
 import { Step, Steps } from "../steps";
 import { FileCodeBlock } from "../file-code-block";
+import { Callout } from "../callout";
 
 interface MdxProps {
 	code: string;
@@ -60,6 +61,7 @@ const components = {
 	Step,
 	Steps,
 	FileCodeBlock,
+	Callout,
 };
 
 export function Mdx({ code }: MdxProps) {

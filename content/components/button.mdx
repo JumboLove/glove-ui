@@ -5,11 +5,19 @@ featured: false
 component: true
 ---
 
+Buttons are enhanced with a larger target area for more reliable clicks.
+
+On long press, a button will show a copy of the button above as a popover.
+
+<Callout variant="warning" className="my-6 max-w-[60ch]">
+	Buttons use the experimental [popover](https://caniuse.com/?search=popover)
+	and [anchor](https://caniuse.com/?search=anchor) browser APIs. Please use
+	caution when implementing as browsers implement these features.
+</Callout>
+
 <ComponentPreview name="button-demo" />
 
 ## Installation
-
-{/* TODO setup callout and highlight to eexperimental browser APIs and suport */}
 
 <Steps>
 
@@ -43,7 +51,7 @@ import { Button } from "@/components/glove-ui/button";
 
 <ComponentPreview name="button-variants" />
 
-### Large & Small
+### Sizes
 
 <ComponentPreview name="button-large-small" />
 

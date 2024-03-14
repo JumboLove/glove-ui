@@ -1,3 +1,4 @@
+import GloveUiIcon from "@/components/icons/glove-ui";
 import { Button } from "@/registry/default/glove-ui/button";
 
 export default function ButtonDisabled() {
@@ -20,6 +21,9 @@ export default function ButtonDisabled() {
 			</Button>
 			<Button disabled variant={"destructive"}>
 				destructive
+			</Button>
+			<Button disabled size={"icon"}>
+				<GloveUiIcon className="w-4" />
 			</Button>
 		</div>
 	);

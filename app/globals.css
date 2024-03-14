@@ -74,7 +74,8 @@
 		@apply bg-background text-foreground;
 	}
 
-	.link-underline {
+	.link-underline,
+	.mdx a {
 		@apply underline underline-offset-2 hover:underline-offset-4 transition-all;
 	}
 }

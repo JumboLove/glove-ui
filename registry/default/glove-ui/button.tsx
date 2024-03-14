@@ -1,10 +1,5 @@
 "use client";
 
-/**
- * TODO factor in clickable vs. visible area
- * Look to Checkbox to see how this was accomplished
- */
-
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -41,6 +36,14 @@ export const buttonVariants = cva(
 	}
 );
 
+type Sizes = NonNullable<VariantProps<typeof buttonVariants>["size"]>;
+const invisibleBoxSizeMap: Record<Sizes, string> = {
+	default: "-top-2 -left-2 -bottom-2 -right-2",
+	sm: "-top-3 -left-3 -bottom-3 -right-3",
+	lg: "-top-2 -left-2 -bottom-2 -right-2",
+	icon: "-top-3 -left-3 -bottom-3 -right-3",
+};
+
 export interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 		VariantProps<typeof buttonVariants> {
@@ -58,6 +61,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		const popoverId = `glove-ui-popover-${uniqueId}`;
 		const btnId = id || `glove-ui-btn-${uniqueId}`;
 		const popoverRef = React.useRef<HTMLDivElement>(null);
+		const invisibleBoxSizeClasses = invisibleBoxSizeMap[size ?? "default"];
 
 		// Only show popover during a long press
 		const attrs = useLongPress(
@@ -79,7 +83,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 			<>
 				<Comp
 					className={cn(
-						"inline-flex",
+						"relative inline-flex",
 						buttonVariants({ variant, size, className })
 					)}
 					ref={ref}
@@ -88,6 +92,11 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 					{...props}
 					{...attrs}
 				>
+					{/* Invisible box that makes click target bigger than the visible checkbox */}
+					<div
+						className={cn("absolute debug-bg", invisibleBoxSizeClasses)}
+						aria-hidden="true"
+					></div>
 					{children}
 				</Comp>
 
