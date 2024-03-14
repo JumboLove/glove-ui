@@ -99,6 +99,15 @@ export const example: Registry = [
 			() => import("@/registry/default/example/slider-custom-label")
 		),
 	},
+	{
+		name: "slider-multiple-thumbs",
+		type: "components:example",
+		registryDependencies: ["slider"],
+		files: ["example/slider-multiple-thumbs.tsx"],
+		component: lazy(
+			() => import("@/registry/default/example/slider-multiple-thumbs")
+		),
+	},
 ];
 
 export const registry: Registry = [...gloveUi, ...example];

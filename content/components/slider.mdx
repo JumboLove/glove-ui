@@ -8,6 +8,12 @@ links:
   api: https://www.radix-ui.com/primitives/docs/components/slider#api-reference
 ---
 
+Sliders are enhanced with a larger target area on their thumbs for more reliable clicks.
+
+While sliding, a popup will show the current value of the thumb.
+
+<br />
+
 <ComponentPreview name="slider-demo" />
 
 ## Installation
@@ -44,8 +50,10 @@ import { Button } from "@/components/glove-ui/slider";
 
 <ComponentPreview name="slider-custom-label" />
 
-TODO more examples
+### Multiple thumbs
 
-Slider with multiple value
+<Callout>
+	Use `minStepsBetweenThumbs` to avoid thumbs with equal values.
+</Callout>
 
-Note on not overlapping in values
+<ComponentPreview name="slider-multiple-thumbs" />
