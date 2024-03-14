@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { Inspect } from "lucide-react";
+import TooltipAboveIcon from "@/components/icons/tooltip-above";
+import { Badge } from "@/components/ui/badge";
 
 export default function Hero() {
 	return (
@@ -14,6 +17,20 @@ export default function Hero() {
 						shadcn UI
 					</a>
 				</p>
+				<div className="mt-1 text-muted-foreground">
+					<ul className="flex flex-col items-center gap-4">
+						<li className="flex items-center gap-2">
+							<Inspect className="w-6 h-6" /> Larger click/touch areas
+						</li>
+						<li className="flex items-center gap-2">
+							<TooltipAboveIcon className="w-6 h-6" /> Popovers on long press
+						</li>
+						<li>
+							<Badge variant={"secondary"}>Soon</Badge> Fully custom components
+							for touch interactions
+						</li>
+					</ul>
+				</div>
 				<div className="flex gap-2 mt-1">
 					<Link
 						href="/setup"

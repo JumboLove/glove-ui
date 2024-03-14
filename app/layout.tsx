@@ -3,7 +3,6 @@ import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { siteConfig } from "./site-config";
-import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -84,7 +83,8 @@ export default function RootLayout({
 						</div>
 					</footer>
 				</ThemeProvider>
-				<Analytics />
+				{/* TODO replace with custom analytics */}
+				{/* <Analytics /> */}
 				<Toaster />
 			</body>
 		</html>

@@ -2,28 +2,12 @@
 
 Components for gloved fingers, build with shadcn UI
 
-## Site Setup TODO
-
-- [x] Create Layout for pages
-- [x] Setup `/components` page
-- [x] Setup `sidebar` navigation
-- [x] Fix sidebar staying open when navigation. ShadCN has a `mobileLink` component
-- [x] Fix navigation on `/components` - mobile user is stuck
-- [x] Homepage
-- [x] Update next.js if I dare - I do not
-
 ## TODO
 
-- [ ] Scope out analytics and see if it makes sense for this site (assuming Vercel hosting)
-- [x] Setup Remote repo
-- [x] Setup hosting
-- [ ] Setup domain
-- [ ] Customized `notFound()` for components and general pages
-- [ ] Fix mousedown events not moving the hand cursor
-- [ ] Add disclaimer on button component
-- [ ] Double check domain URL and repo URL settings
 - [ ] Check on OG stuff
 - [ ] Improve homepage
+- [ ] Fix mousedown events not moving the hand cursor
+- [ ] Update analytics (Vercel analytics commented out)
 
 ## Why
 
@@ -63,7 +47,7 @@ All `glove-ui` components are copy/paste-able into any project where `shadcn/ui`
 
 ## Documentation
 
-You can find out more about the API and implementation in the [Documentation](https://TODO).
+You can find out more about the API and implementation in the [Documentation](https://glove-ui.davidwitt.me).
 
 ## Contributing
 

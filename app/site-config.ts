@@ -11,7 +11,7 @@ export type SiteConfig = {
 export const siteConfig: SiteConfig = {
 	name: "Glove UI",
 	description: "Components for gloved fingers, build with shadcn UI",
-	url: "https://TODO.com",
+	url: "https://glove-ui.davidwitt.me",
 	links: {
 		twitter: "https://twitter.com/davidwittness",
 		github: "https://github.com/JumboLove/glove-ui",

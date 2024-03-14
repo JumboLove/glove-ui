@@ -67,9 +67,6 @@ export function rehypeComponent() {
 						);
 						let source = fs.readFileSync(filePath, "utf8");
 
-						// Replace imports.
-						// TODO: Use @swc/core and a visitor to replace this.
-						// For now a simple regex should do.
 						source = source.replaceAll(
 							`@/registry/${style.name}/`,
 							"@/components/"
@@ -135,8 +132,6 @@ export function rehypeComponent() {
 						let source = fs.readFileSync(filePath, "utf8");
 
 						// Replace imports.
-						// TODO: Use @swc/core and a visitor to replace this.
-						// For now a simple regex should do.
 						source = source.replaceAll(
 							`@/registry/${style.name}/`,
 							"@/components/"
