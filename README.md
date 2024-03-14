@@ -21,13 +21,6 @@ Some of our UX strategies include:
 - Showing what element is under your cursor on long press
 - Providing full alternatives to mouse centric components
 
-## Developer Flow
-
-1. Create a component in `registry/default/glove-ui`
-1. Update the registry with your new component
-1. Update `nav.ts` `sidebarConfig`
-1. Create a new MDX file in `content/components`
-
 ## Usage
 
 This project extends the design system of [shadcn/ui](https://ui.shadcn.com/).
@@ -48,6 +41,13 @@ All `glove-ui` components are copy/paste-able into any project where `shadcn/ui`
 ## Documentation
 
 You can find out more about the API and implementation in the [Documentation](https://glove-ui.davidwitt.me).
+
+## Developer Flow
+
+1. Create a component in `registry/default/glove-ui`
+1. Update the registry with your new component
+1. Update `nav.ts` `sidebarConfig`
+1. Create a new MDX file in `content/components`
 
 ## Contributing
 
