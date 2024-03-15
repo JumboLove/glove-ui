@@ -4,10 +4,10 @@ Components for gloved fingers, build with shadcn UI
 
 ## TODO
 
-- [ ] Check on OG stuff
 - [ ] Improve homepage
 - [ ] Fix mousedown events not moving the hand cursor
 - [ ] Update analytics (Vercel analytics commented out)
+- [ ] Update logo
 
 ## Why
 

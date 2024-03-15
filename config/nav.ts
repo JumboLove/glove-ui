@@ -34,6 +34,10 @@ export const sidebarConfig = {
 					href: "/components/checkbox",
 				},
 				{
+					title: "Radio Group",
+					href: "/components/radio-group",
+				},
+				{
 					title: "Slider",
 					href: "/components/slider",
 				},
