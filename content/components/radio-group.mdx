@@ -1,0 +1,67 @@
+---
+title: Radio Group
+description: A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.
+featured: false
+component: true
+links:
+  doc: https://www.radix-ui.com/primitives/docs/components/radio-group
+  api: https://www.radix-ui.com/primitives/docs/components/radio-group#api-reference
+---
+
+Radio inputs are enhanced with a larger target area for more reliable clicks.
+
+<br />
+
+<ComponentPreview name="radio-group-demo" />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-radio-group
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<FileCodeBlock fileName="registry/default/glove-ui/radio-group.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Usage
+
+```tsx
+import { RadioGroup, RadioGroupItem } from "@/components/glove-ui/radio-group";
+```
+
+```tsx
+<RadioGroup defaultValue="option-one">
+	<div className="flex items-center space-x-2">
+		<RadioGroupItem value="one" id="option-one" />
+		<label htmlFor="option-one">Option One</label>
+	</div>
+	<div className="flex items-center space-x-2">
+		<RadioGroupItem value="two" id="option-two" />
+		<label htmlFor="option-two">Option Two</label>
+	</div>
+</RadioGroup>
+```
+
+## Everything below this line is subject to deletion
+
+## Examples
+
+### Disabled
+
+<Callout>
+	Disabled labels are styled within the RadioGroupItem with the Tailwind sibling
+	selector `[&:disabled+label]:`
+</Callout>
+
+<br />
+
+<ComponentPreview name="radio-group-disabled" />

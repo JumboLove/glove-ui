@@ -20,6 +20,14 @@ export const gloveUi: Registry = [
 		component: lazy(() => import("@/registry/default/glove-ui/checkbox")),
 	},
 	{
+		name: "radio-group",
+		title: "Radio Group",
+		type: "components:ui",
+		dependencies: ["@radix-ui/react-radio-group"],
+		files: ["glove-ui/radio-group.tsx"],
+		component: lazy(() => import("@/registry/default/glove-ui/radio-group")),
+	},
+	{
 		name: "slider",
 		title: "Slider",
 		type: "components:ui",
@@ -81,6 +89,24 @@ export const example: Registry = [
 		files: ["example/checkbox-disabled.tsx"],
 		component: lazy(
 			() => import("@/registry/default/example/checkbox-disabled")
+		),
+	},
+	{
+		name: "radio-group-demo",
+		type: "components:example",
+		registryDependencies: ["radio-group"],
+		files: ["example/radio-group-demo.tsx"],
+		component: lazy(
+			() => import("@/registry/default/example/radio-group-demo")
+		),
+	},
+	{
+		name: "radio-group-disabled",
+		type: "components:example",
+		registryDependencies: ["radio-group"],
+		files: ["example/radio-group-disabled.tsx"],
+		component: lazy(
+			() => import("@/registry/default/example/radio-group-disabled")
 		),
 	},
 	{
