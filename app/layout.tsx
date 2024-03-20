@@ -88,8 +88,12 @@ export default function RootLayout({
 						</div>
 					</footer>
 				</ThemeProvider>
-				{/* TODO replace with custom analytics */}
-				{/* <Analytics /> */}
+				{/* Umami Analytics */}
+				<script
+					defer
+					src="https://umami-production-d591.up.railway.app/script.js"
+					data-website-id="362ae93a-3014-407b-aa6f-92e8aa60e976"
+				></script>
 				<Toaster />
 			</body>
 		</html>
